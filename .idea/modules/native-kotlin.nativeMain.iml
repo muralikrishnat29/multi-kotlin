@@ -8,6 +8,10 @@
           <sourceSet>native-kotlin.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <externalSystemTestTasks>
+          <externalSystemNativeMainRunTask>runDebugExecutableNative|native-kotlin:nativeMain|native|main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runReleaseExecutableNative|native-kotlin:nativeMain|native|main|false</externalSystemNativeMainRunTask>
+        </externalSystemTestTasks>
         <compilerSettings />
         <compilerArguments>
           <stringArguments>

@@ -15,7 +15,6 @@ repositories {
     mavenLocal()
     jcenter()
 }
-
 kotlin {
     jvm {
         withJava()
@@ -39,7 +38,7 @@ kotlin {
     nativeTarget.apply {
         binaries {
             executable {
-
+                entryPoint = "main"
             }
         }
         application {
@@ -97,12 +96,18 @@ kotlin {
 
         val jsMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-js:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation(project.dependencies.enforcedPlatform("org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:$kotlinWrappersVersion"))
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:18.0.0-pre.327-kotlin-1.6.20")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-react:18.0.0-pre.328-kotlin-1.6.20")
+
+                implementation(npm("react", "18.0.0"))
+                implementation(npm("react-dom", "18.0.0"))
+
+                //Kotlin React CSS (chapter 3)
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-react-css:18.0.0-pre.331-kotlin-1.6.20")
+
+                //Coroutines & serialization (chapter 8)
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
             }
         }
         val jvmTest by getting {
