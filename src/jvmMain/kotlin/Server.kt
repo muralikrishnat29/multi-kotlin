@@ -1,3 +1,6 @@
+package com.boiler.plate.jvm
+
+import com.boiler.plate.common.SomeContent
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*

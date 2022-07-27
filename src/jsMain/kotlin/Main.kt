@@ -1,3 +1,5 @@
+package com.boiler.plate.js
+
 import kotlinx.browser.document
 import csstype.Position
 import csstype.px

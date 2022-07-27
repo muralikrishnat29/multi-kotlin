@@ -41,18 +41,8 @@ kotlin {
                 entryPoint = "main"
             }
         }
-        application {
-
-        }
     }
 
-    mingwX64() {
-        binaries {
-            executable {
-
-            }
-        }
-    }
     // macosX64("native") { // on macOS
     // linuxX64("native") // on Linux
 }
@@ -76,9 +66,6 @@ kotlin {
             dependencies {
 
             }
-        }
-        val mingwX64Main by getting {
-            dependsOn(nativeMain)
         }
         val nativeTest by getting
         val jvmMain by getting {

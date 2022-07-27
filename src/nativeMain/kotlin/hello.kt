@@ -1,3 +1,6 @@
+package com.boiler.plate.native
+
+import com.boiler.plate.common.SomeContent
 
 fun main() {
     val someContent = SomeContent("Native endpoint")
